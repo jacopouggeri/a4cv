@@ -1,3 +1,13 @@
+- title: "Machine Learning Research Assistant - VRAI Labs"
+  subtitle:
+  location: "Università Politecnica delle Marche (Remote)"
+  supervisor: "Primo Zingaretti"
+  date: "2025"
+  details: |
+    - Unofficially peer-reviewed submissions for [Journal Of Computing and Cultural Heritage](https://dl.acm.org/journal/jocch)
+    - Contributed to the paper [*Enhancing Cultural Heritage with Generative AI: A Comparative Framework for the Evaluation of 3D Model Accuracy and Visual Fidelity*](https://doi.org/10.2312/dh.20253146)
+    - Worked on novel metrics for evaluation of 3D generative diffusion models
+
 - title: "Representation Theory of Non-abelian Magnetic Charges"
   subtitle:
   location: "MSc Dissertation at Imperial College London"

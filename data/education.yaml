@@ -1,3 +1,12 @@
+- name: "Doctor of Philosophy"
+  link:
+  location: "London, UK"
+  university: "King's College London"
+  date: "Oct 2025 — Present"
+  more:
+  gpa :
+  details:
+
 - name: "Msc Quantum Fields and Fundamental Forces"
   link: https://www.imperial.ac.uk/study/courses/postgraduate-taught/quantum-fields-fundamental-forces/
   location: "London, UK"
