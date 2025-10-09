@@ -29,25 +29,21 @@ skills:
       - Java
       - Git
       - Mathematica
-      - Haskell
-      - Matlab
-      - Fortran
+#     - Fortran
 
   - groupName: Markup
     flexSpan: 15
     list:
       - LaTeX
-      - Markdown
       - HTML
       - CSS
-      - Javascript
+#      - Javascript
 
   - groupName: ML & Data
     flexSpan: 15
     list:
       - Python
       - PyTorch
-      - Keras
       - OpenCV
 
 #  - groupName: Adobe
@@ -61,7 +57,7 @@ skills:
 interests:
   - Gravity
   - Machine Learning
-  - Languages
+  - Coding
 
 languages:
   - name: Italian

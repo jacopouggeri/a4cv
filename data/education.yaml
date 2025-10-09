@@ -16,7 +16,7 @@
   gpa : "Merit (66.93/100)"
   details: |
     - Modules include: Particle Symmetries, Differential Geometry, QED, Advanced QFT, Black Holes, String Theory, Supersymmetry, Relativity and Cosmology
-    - Attended weekly seminars in the Theoretical Physics Group
+#    - Attended weekly seminars in the Theoretical Physics Group
 
 - name: "Msci Physics with Theoretical Physics"
   university: "Imperial College London"
@@ -26,13 +26,13 @@
   gpa: "2nd Class Honours (67.08/100)"
   details: |
     - Achieved First Class Honours in theoretical modules: Mathematical Methods, Foundations of Quantum Mechanics, Advanced Classical Physics, Group Theory, Nuclear and Particle Physics, Statistical Mechanics, General Relativity
-    - Completed final year with First Class Honours, with a successful research project on red giant photoevaporation in the Galactic Centre
+#    - Completed final year with First Class Honours, with a successful research project on red giant photoevaporation in the Galactic Centre
 
 - name: "Diploma di Liceo Scientifico Tradizionale" 
   university: "Liceo Scientifico Giovanni Gandini"
   location: "Lodi, Italy" # Optional field, if you want to add a non-standard line.
   date: "2013 — 2019"
   gpa: "100/100"
-  details: |
-    - Scientifically oriented high school program spanning both sciences and humanities
-    - Actively participated in extracurricular events and activities with a focus on Physics and Mathematics
+#  details: |
+#    - Scientifically oriented high school program spanning both sciences and humanities
+#    - Actively participated in extracurricular events and activities with a focus on Physics and Mathematics

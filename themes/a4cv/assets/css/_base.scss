@@ -28,9 +28,20 @@ a {
   }
 
   &:not(.no-external-icon)::after {
-    font-family: 'Font Awesome 5 Free';
+    font-family: 'Font Awesome 5 Free', serif;
     content: '\f0c1';
     margin: 0 0.2rem 0 0.25rem;
+  }
+
+  html.fa-ready &:not(.no-external-icon)::after {
+    font-family: "Font Awesome 5 Free", serif;
+    font-weight: 900; /* FA5 Solid needs 900 */
+    font-style: normal;
+    speak: never;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\f0c1";
+    display: inline-block;
   }
 }
 

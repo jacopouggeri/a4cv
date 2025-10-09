@@ -76,7 +76,7 @@ params:
         - feature: education
     - features:
         - feature: researchPositions
-          title: Research Positions
+          title: Additional Positions
         - feature: workshops
           title: Workshops & Conferences
         - feature: proExperience
@@ -104,7 +104,7 @@ params:
   footer:
     show: true
     credits: true
-    lastUpdate: "30 Jan 2025"
+    lastUpdate: "9 Oct 2025"
     footnote: >-
       
     links:

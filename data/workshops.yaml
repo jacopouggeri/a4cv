@@ -3,7 +3,7 @@
   link: "https://education.wolfram.com/winter-school/"
   date: "Jan 2025"
   details: |
-    - Will complete an **original research project** under Wolfram mentors, aligned with MSc dissertation topic and the Wolfram Physics Project
+    - Completed brief **research project** titled *[Exploring Ruliological Engineering of Well-defined Geometries from Hypergraph Rewriting](https://community.wolfram.com/groups/-/m/t/3358036)*
 - title: Tonale Winter School on Cosmology
   location: Heidelberg University, Passo del Tonale, Italy
   link: https://indico.physi.uni-heidelberg.de/event/947/
@@ -23,6 +23,12 @@
   details: |
     - **Selected to give a talk** on my MSci research on red giant photoevaporation
     - **Presented a poster**, which was awarded the **second best poster prize** as judged by practicing physicists
+- title: "DeepLearn Summer School"
+  link: "https://irdta.eu/deeplearn-events/"
+  certificate: "https://jacopouggeri.github.io/docs/cv/deeplearn.pdf"
+  location: Las Palmas de Gran Canaria, Spain – Remote
+  date: "July 2021"
+  collapse: true
 
 #- title: Search for Beyond SM Physics from LHCb Data
 #  disable: false

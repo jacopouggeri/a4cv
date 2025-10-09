@@ -21,6 +21,14 @@
 		{{ end }}
 	{{ end }}
 	<title itemprop="name">{{ .Site.Title }}</title>
+	<script>
+		// Zen/Firefox support for FA
+		Promise.all([
+			document.fonts.load('900 1em "Font Awesome 5 Free"')
+		]).then(() => {
+			document.documentElement.classList.add('fa-ready');
+		});
+	</script>
 </head>
 
 <body>
