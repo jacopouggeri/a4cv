@@ -1,6 +1,6 @@
 about:
   name: Jacopo Uggeri
-  tagline: Master's student in Theoretical Physics
+  tagline: PhD Candidate at KCL
   phone:
   email: jacopo.uggeri@gmail.com
   links:
@@ -17,7 +17,7 @@ about:
       url: https://youtube.com/@jacopouggeri
       icon: fab fa-youtube
   details: |
-    Curiosity-driven student with a strong interest in theoretical and mathematical physics, seeking a PhD position in theoretical physics starting in 2025. Research interests include general relativity, cosmology and gravitational waves.
+    **Research interests**: gravitational waves, computational methods in general relativity, machine learning.
 
 skills:
 
