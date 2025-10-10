@@ -5,7 +5,6 @@
   date: "2025"
   details: |
     - Assisted in peer review of manuscripts for [Journal Of Computing and Cultural Heritage](https://dl.acm.org/journal/jocch)
-    - Contributed to the publication [*Enhancing Cultural Heritage with Generative AI: A Comparative Framework for the Evaluation of 3D Model Accuracy and Visual Fidelity*](https://doi.org/10.2312/dh.20253146)
     - Worked on novel metrics for evaluation of 3D generative diffusion models
 
 - title: "Representation Theory of Non-abelian Magnetic Charges"
@@ -37,9 +36,8 @@
   link: "https://jacopouggeri.github.io/msci/"
   date: "2022 — 2023"
   details: |
-    - Investigated the impact of photoevaporation on red giants in proximity to supermassive black holes
+    - Produced a comprehensive analysis, concluding that proximity to an accreting supermassive black hole can significantly impact the evolution of red giant stars
     - Computational and theoretical project: designed, wrote, and tested shareable code
-    - Produced a comprehensive analysis, concluding that photoevaporation can significantly influence a red giant's life
     - Continued after graduation, building on previous results: modified MESA, a research-grade stellar evolution code, to simulate the evolution of red giants under photoevaporation
 #    - Achieved a First Class Honours grade for the project
 

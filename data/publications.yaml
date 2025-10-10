@@ -1,12 +1,22 @@
-#- authors:
-#    - last_name: Dantzing
-#      first_name: George
-#    - last_name: Sunstrider
-#      middle_name: "Felo'melorn"
-#      first_name: Kael'thas
-#  date: "2006"
-#  title: "Additive Outlier Detection Via Extreme-Value Theory"
-#  journal: Journal of Time Series Analysis
-#  vol: 27
-#  issue: 5
-#  page: "29-34"
+- entry_type: conference
+  title: "Enhancing Cultural Heritage with Generative AI: A Comparative Framework for the Evaluation of 3D Model Accuracy and Visual Fidelity"
+  date: "2025"
+  authors:
+    - last_name: Balloni
+      first_name: Emanuele
+    - last_name: Paolanti
+      first_name: Marina
+    - last_name: Uggeri
+      first_name: Jacopo
+    - last_name: Zingaretti
+      first_name: Primo
+    - last_name: Pierdicca
+      first_name: Roberto
+  booktitle: "Digital Heritage — Eurographics Workshop on Graphics and Cultural Heritage"
+  publisher: "The Eurographics Association"
+#  isbn: "978-3-03868-277-6"
+  page:
+  vol:
+  issue:
+  doi: "10.2312/dh.20253146"
+  url: "https://doi.org/10.2312/dh.20253146"

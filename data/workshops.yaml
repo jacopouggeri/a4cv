@@ -3,17 +3,19 @@
   link: "https://education.wolfram.com/winter-school/"
   date: "Jan 2025"
   details: |
-    - Completed brief **research project** titled *[Exploring Ruliological Engineering of Well-defined Geometries from Hypergraph Rewriting](https://community.wolfram.com/groups/-/m/t/3358036)*
+    - Produced project report *Exploring Ruliological Engineering of Well-defined Geometries from Hypergraph Rewriting* [](https://community.wolfram.com/groups/-/m/t/3358036)
 - title: Tonale Winter School on Cosmology
   location: Heidelberg University, Passo del Tonale, Italy
   link: https://indico.physi.uni-heidelberg.de/event/947/
   date: "Dec 2024"
+  collapse: true
   details: |
     - School organised by Heidelberg University aimed at advanced masters students and PhD students, **participated in workshops** on fundamental physics tests with GW and attended lectures from leading researchers in the field
 - title: EMR Gravitational Waves PhD School
   location: KU Leuven, Leuven Gravity Institute
   link: https://indico.fys.kuleuven.be/event/98/overview
   date: "Nov 2024"
+  collapse: true
   details: |
     - Participated in week-long school on gravitational waves, focusing on the theoretical and experimental aspects
     - **Presented a poster** on my MSc research on the representation theory of non-abelian magnetic charges
@@ -21,7 +23,7 @@
   location: Imperial College London, SynBIC
   date: "Feb 2024"
   details: |
-    - **Selected to give a talk** on my MSci research on red giant photoevaporation
+    - **Selected as a speaker** and gave a talk on MSci research on Red Giant Photoevaporation
     - **Presented a poster**, which was awarded the **second best poster prize** as judged by practicing physicists
 - title: "DeepLearn Summer School"
   link: "https://irdta.eu/deeplearn-events/"

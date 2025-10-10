@@ -1,63 +1,94 @@
 {{ range .Data.publications }}
 <div class="item">
-	{{- if .link }}
-	<a href="{{ .link }}">
-	{{- end -}}
+	{{/* Helpers */}}
+	{{- $isJournal := or .journal (eq .entry_type "journal") -}}
+	{{- $isConf    := or .booktitle (or .conference (eq .entry_type "conference")) -}}
+	{{- $isThesis  := or .thesis (eq .entry_type "thesis") -}}
+	{{- $isPre     := eq .entry_type "preprint" -}}
+
 	{{- if eq $.Feature.style "IEEE" }}
-		<span>
-			{{- range .authors -}}
-				{{- substr .first_name 0 1 }}. {{ with .middle_name }}{{ substr . 0 1 }}. {{ end }}{{ .last_name }},
-			{{- end -}}
-		</span>
-		<span>"{{ .title }}",</span>
-		{{- if .journal }}
-		<span>
-			{{- "" -}}
-			<i>{{ .journal }}</i>,
-			{{- with .vol }} vol. {{.}},{{ end -}}
-			{{- with .page }} pp. {{.}},{{ end -}}
-		</span>
-		{{- else if .thesis }}
-		<span>{{ .thesis }},</span>
-		{{- end }}
-		<span>{{ .date }}</span>.
+	<span>
+      {{- $last := sub (len .authors) 1 -}}
+      {{- range $i, $a := .authors -}}
+        {{- substr $a.first_name 0 1 }}. {{ with $a.middle_name }}{{ substr . 0 1 }}. {{ end }}{{ $a.last_name }}{{ if lt $i $last }}, {{ end -}}
+      {{- end -}}
+    </span>
+	<span>"{{ .title }}",</span>
+
+	{{- if $isJournal }}
+	<span>
+        <i>{{ .journal }}</i>{{ with .vol }}, vol. {{ . }}{{ end }}{{ with .issue }}, no. {{ . }}{{ end }}{{ with .page }}, pp. {{ . }}{{ end }},
+      </span>
+	{{- else if $isConf }}
+	<span>
+        in <i>{{ or .booktitle .conference }}</i>{{ with .location }}, {{ . }}{{ end }}{{ with .publisher }}, {{ . }}{{ end }}{{ with .page }}, pp. {{ . }}{{ end }},
+      </span>
+	{{- else if $isThesis }}
+	<span>{{ .thesis }}{{ with .publisher }}, {{ . }}{{ end }},</span>
+	{{- else if $isPre }}
+	<span>Preprint{{ with .publisher }}, {{ . }}{{ end }},</span>
+	{{- end }}
+
+	<span>{{ .date }}</span>{{ with .doi }}, doi: {{ . }}{{ end }}{{ if and (not .doi) .url }}, {{ .url }}{{ end }}.
+
 	{{- else if eq $.Feature.style "APA" }}
-		<span>
-			{{- $last_index := sub (.authors | len) 1 -}}
-			{{- range $i, $e := .authors -}}
-			{{- if and (gt $i 0) (eq $i $last_index) }}& {{ end -}}
-			{{- $e.last_name }}, {{ substr $e.first_name 0 1 }}.{{ with $e.middle_name }} {{ substr . 0 1 }}.{{ end -}}
-			{{- if ne $i $last_index }}, {{ end -}}
-			{{- end -}}
-		</span>
-		<span>({{ .date }}).</span>
-		<span>{{ .title }}.</span>
-		{{- if .journal }}
-		<span>
-			{{- "" -}}
-			<i>{{- .journal -}}</i>
-			{{- if .vol }}, <i>{{.vol}}</i>{{with .issue}}({{.}}){{end}}{{ end -}}
-			{{- with .page }}, pp.{{.}}{{ end -}}
-			.
-			{{- "" -}}
-		</span>
-		{{ end }}
+	<span>
+      {{- $last := sub (len .authors) 1 -}}
+      {{- range $i, $a := .authors -}}
+        {{- if and (gt $i 0) (eq $i $last) }}& {{ end -}}
+        {{- $a.last_name }}, {{ substr $a.first_name 0 1 }}.{{ with $a.middle_name }} {{ substr . 0 1 }}.{{ end -}}
+        {{- if ne $i $last }}, {{ end -}}
+      {{- end -}}
+    </span>
+	<span>({{ .date }}).</span>
+	<span>{{ .title }}.</span>
+
+	{{- if $isJournal }}
+	<span>
+        <i>{{ .journal }}</i>{{ with .vol }}, <i>{{ . }}</i>{{ with $.issue }}({{ . }}){{ end }}{{ end }}{{ with .page }}, {{ . }}{{ end }}.
+        {{- with .doi }} https://doi.org/{{ . }}{{ end -}}
+        {{- if and (not .doi) .url }} {{ .url }}{{ end -}}
+      </span>
+	{{- else if $isConf }}
+	<span>
+        In <i>{{ or .booktitle .conference }}</i>{{ with .location }}, {{ . }}{{ end }}{{ with .publisher }}, {{ . }}{{ end }}{{ with .page }} (pp. {{ . }}){{ end }}.
+        {{- with .doi }} https://doi.org/{{ . }}{{ end -}}
+        {{- if and (not .doi) .url }} {{ .url }}{{ end -}}
+      </span>
+	{{- else if $isThesis }}
+	<span><i>{{ .thesis }}</i>{{ with .publisher }}, {{ . }}{{ end }}.</span>{{ with .url }} {{ . }}{{ end }}
+	{{- else if $isPre }}
+	<span><i>Preprint</i>{{ with .publisher }}. {{ . }}{{ end }}.</span>
+	{{- with .doi }} https://doi.org/{{ . }}{{ end -}}
+	{{- if and (not .doi) .url }} {{ .url }}{{ end -}}
+	{{- end }}
+
 	{{- else }}
-		<span>
-			{{- $last_index := sub (.authors | len) 1 -}}
-			{{- range $i, $e := .authors -}}
-			{{- if and (gt $i 0) (eq $i $last_index) }}and {{ end -}}
-			{{- $e.last_name }}, {{ substr $e.first_name 0 1 }}.{{ with $e.middle_name }} {{ substr . 0 1 }}.{{ end -}}
-			{{- if ne $i $last_index }}, {{ end -}}
-			{{- end -}}
-			,
-			{{- "" -}}
-		</span>
-		{{ with .date }}<span>{{.}}.</span>{{ end }}
-		<span>{{ .title }}</span>
-	{{- end -}}
-	{{- if .link }}
-	</a>
+	{{/* Fallback minimal style */}}
+	<span><strong>{{ .title }}</strong></span>
+	<span> —
+      {{- range $i, $a := .authors -}}
+        {{- if $i }}, {{ end -}}
+        {{- $a.first_name }} {{ with $a.middle_name }}{{ . }} {{ end }}{{ $a.last_name -}}
+      {{- end -}}
+    </span>.
+	<span>
+      {{- if $isJournal -}}
+        <i>{{ .journal }}</i>
+      {{- else if $isConf -}}
+        <i>{{ or .booktitle .conference }}</i>
+      {{- else if $isThesis -}}
+        {{ .thesis }}
+      {{- else if $isPre -}}
+        Preprint{{ with .publisher }} — {{ . }}{{ end }}
+      {{- end -}}
+    </span>
+	<span>
+      {{- with .vol }} {{ . }}{{ end -}}
+      {{- with .issue }} ({{ . }}){{ end -}}
+      {{- with .page }}{{ if or $.vol $.issue }}, {{ end }}{{ . }}{{ end -}}
+    </span>.
+	<span>{{ .date }}</span>{{ with .doi }} — https://doi.org/{{ . }}{{ end }}{{ if and (not .doi) .url }} — {{ .url }}{{ end }}.
 	{{- end }}
 </div>
 {{ end }}
