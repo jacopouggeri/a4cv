@@ -13,9 +13,12 @@ about:
     - title: jacopouggeri
       url: https://github.com/jacopouggeri
       icon: fab fa-github
-    - title: jacopouggeri
-      url: https://youtube.com/@jacopouggeri
-      icon: fab fa-youtube
+#    - title: jacopouggeri
+#      url: https://youtube.com/@jacopouggeri
+#      icon: fab fa-youtube
+    - title: ORCID
+      url: https://orcid.org/0009-0001-1469-5566
+      icon: fab fa-orcid
   details: |
     **Research interests**: gravitational waves, computational methods in general relativity, machine learning.
 
